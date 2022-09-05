@@ -1,0 +1,22 @@
+#components-grid-demo-flex-order [class~='ant-row'] {
+    background: rgba(128, 128, 128, 0.08);
+  }
+
+
+.main-body{
+  padding: 2%;
+}
+
+
+/* .charts{
+  display: flex; */
+  /* flex-wrap: wrap; */
+/* } */
+
+/* .flex-Column{
+  flex-direction: column;
+} */
+
+/* .pie{
+  min-height: 10v;
+} */
