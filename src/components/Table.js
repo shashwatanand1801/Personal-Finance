@@ -1,5 +1,8 @@
 import { Table } from 'antd';
 import React from 'react';
+import {data} from './GenerateData'
+
+
 const columns = [
   {
     title: 'ID',
@@ -43,103 +46,16 @@ const columns = [
   //   render: () => <a>Delete</a>,
   // },
 ];
-const data = [
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-  {
-    id: 1,
-    from : '1-2-22',
-    to : '2-2-22',
-    data: 'butter',
-    type: 'food',
-    tag: 'grocery',
-    amount: 300,
-  },
-];
+
+
+console.log(data)
 
 const App = () => (
   <Table
     columns={columns}
     dataSource={data}
+    pagination={{ pageSize: 10 }} 
+    scroll={{ y: 400 }}
   />
 );
 

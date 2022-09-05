@@ -3,10 +3,10 @@ import Table from './components/Table'
 import Bar from './components/Bar'
 import Pie from './components/Pie'
 import Balance from './components/Balance'
-import { Col, Divider, Row } from 'antd';
+import { Col, Switch, Row } from 'antd';
 
 // import { Layout } from 'antd';
-import React from 'react';
+import React, { useState, useEffect  } from 'react';
 import './App.css'
 
 
@@ -17,31 +17,16 @@ import 'antd/dist/antd.css';
 
 
 function App() {
+
+  const [visible, setvisible] = useState(true);
+  useEffect(()=>{},[visible])
+
+
   return (
     <div>
 
-      {/* <Layout>
-          <Header><Heading /></Header>
-          <Layout>
-            <Content><Table /></Content>
-            <Sider>
-              <Bar />
-              <Pie />
-            </Sider>
-          </Layout>
-          <Footer><Balance /></Footer>
-        </Layout> */}
-
 
         <Heading />
-
-      {/* <Row>
-      <Col flex={3}><Table /></Col>
-      <Col flex={2}>
-        <Pie />
-        <Bar />
-      </Col>
-      </Row> */}
 
       <div className='main-body'>
 
@@ -50,7 +35,18 @@ function App() {
       <Col flex="3 1 "><Table /></Col>
       <Col flex="1 1 ">
       <div className='charts'>
-      <div className='flex-Column'>
+
+      <div className='toggle-switch'>
+      <Switch defaultChecked visible onChange={()=>setvisible(!visible)} />
+
+      <h5>VIEW GRAPHS</h5>
+      </div>
+
+      
+        {visible? (
+
+
+          <div className='flex-Column'>
         <div className='pie'>
           <Pie />
         </div>
@@ -60,16 +56,19 @@ function App() {
         </div>
       
       </div>
+
+
+          ):null}
+
+      
         
+
+
       </div>
       </Col>
       </Row>
 
 
-       
-      {/* <Table />
-      <Pie />
-      <Bar /> */}
       <Balance />
 
       </div>

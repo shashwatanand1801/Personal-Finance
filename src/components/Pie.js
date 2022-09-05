@@ -1,40 +1,55 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import {amtVal} from './GenerateData'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+
+// var expn = 0;
+// var earn = 0;
+
+// for(var i=0;i<data.length;i++){
+//   if(data[i].type === 'Expenditure'){
+//     expn += parseInt(data[i].amount)
+//   } else {
+//     earn += parseInt(data[i].amount)
+//   }
+// }
+
+
+export const datas = {
+  labels: ['Expenditure', 'Earning'],
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [amtVal.expenditure, amtVal.earning],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
+        // 'rgba(54, 162, 235, 0.2)',
+        // 'rgba(255, 206, 86, 0.2)',
         'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
+        // 'rgba(153, 102, 255, 0.2)',
+        // 'rgba(255, 159, 64, 0.2)',
       ],
       borderColor: [
         'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
+        // 'rgba(54, 162, 235, 1)',
+        // 'rgba(255, 206, 86, 1)',
         'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
+        // 'rgba(153, 102, 255, 1)',
+        // 'rgba(255, 159, 64, 1)',
       ],
       borderWidth: 1,
     },
   ],
 };
 
+
 export default function App() {
   return (
     <div>
-      <Doughnut data={data} />
+      <Doughnut data={datas} />
     </div>
   );
 }
