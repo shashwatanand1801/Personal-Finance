@@ -2,6 +2,7 @@
   "name": "personal-finance",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shashwatanand1801.github.io/Personal-Finance",
   "dependencies": {
     "@antv/g2": "^4.2.7",
     "@testing-library/jest-dom": "^5.16.5",
@@ -16,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.5.0"
+    "@faker-js/faker": "^7.5.0",
+    "gh-pages": "^4.0.0"
   }
 }
