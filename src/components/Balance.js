@@ -1,5 +1,5 @@
 // import { Row, Statistic } from 'antd';
-import React from 'react';
+import React, { Component } from "react";
 import '../style/Balance.css';
 import { amtVal } from './GenerateData';
 
